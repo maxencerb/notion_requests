@@ -18,10 +18,11 @@ const notion_req = async (endpoint, method = 'GET', body = null) => {
     return json
 }
 
-const get_page = (page_id) => {
-    return notion_req(`v1/pages/${page_id}`)
-}
+const get_page = (page_id) => notion_req(`v1/pages/${page_id}`)
+
+const get_page_content = (page_id) => notion_req(`v1/blocks/${page_id}/children`)
 
 export {
-    get_page
+    get_page,
+    get_page_content
 }
