@@ -1,13 +1,10 @@
-import fetch from "node-fetch"
+import { get_page } from "./notion.js"
 
 const NOTION_TOKEN = process.env.NOTION_TOKEN
 
-console.log(`NOTION_TOKEN: ${NOTION_TOKEN}`)
-
 const main = async () => {
-    const res = await fetch('https://maxenceraballand.com')
-    const data = await res.text()
-    console.log(data)
+    const page = await get_page("b7f79b58133349fd90a9db9a0179394f")
+    console.log(page)
 }
 
-// main()
+main()
