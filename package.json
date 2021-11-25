@@ -1,0 +1,16 @@
+{
+  "name": "notion_req",
+  "version": "1.0.0",
+  "description": "request to the notion api",
+  "main": "index.js",
+  "author": "Maxence Raballand",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "run": "node -r dotenv/config index.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "node-fetch": "^3.1.0"
+  }
+}
